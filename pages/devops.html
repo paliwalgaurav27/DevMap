@@ -1,0 +1,144 @@
+<!--
+  File: pages/devops.html
+  Purpose: DevOps Engineer role detail page structure for DevMap
+  Author: Placeholder
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevOps Engineer | DevMap</title>
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/roadmap.css">
+</head>
+<body>
+
+  <!-- Dark Mode Toggle -->
+  <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="../index.html" class="logo">Dev<span>Map</span></a>
+      <a href="../index.html" class="btn btn-outline">← Back to Map</a>
+    </div>
+  </header>
+
+  <!-- Role Shell -->
+  <main class="role-shell container-wide">
+    <section class="role-intro">
+      <h1>DevOps Engineer</h1>
+      <div class="brutal-banner">You don't build the product. You make sure it never stops running.</div>
+    </section>
+
+    <!-- What will you build? -->
+    <section class="info-section what-build-section">
+      <h2>What will you build?</h2>
+      <div class="build-grid">
+        <div class="build-card">
+          <span class="build-icon">🚀</span>
+          <h3>CI/CD Pipeline</h3>
+          <p>Code goes from laptop to live automatically.</p>
+        </div>
+        <div class="build-card">
+          <span class="build-icon">🐳</span>
+          <h3>Containerized App</h3>
+          <p>Package apps so they run anywhere.</p>
+        </div>
+        <div class="build-card">
+          <span class="build-icon">📊</span>
+          <h3>Monitoring System</h3>
+          <p>Know when something breaks before users do.</p>
+        </div>
+        <div class="build-card">
+          <span class="build-icon">☁️</span>
+          <h3>Cloud Infrastructure</h3>
+          <p>Servers, storage, and networks in the cloud.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Where do you sit in a team? -->
+    <section class="info-section team-flow-section">
+      <h2>Where do you sit in a team?</h2>
+      <div class="team-flow">
+        <div class="team-node">
+          <span class="team-role">Developer</span>
+          <span class="team-desc">Writes the code</span>
+        </div>
+        <div class="team-arrow">→</div>
+        <div class="team-node you">
+          <span class="team-role">You: DevOps</span>
+          <span class="team-desc">Automates deployment</span>
+        </div>
+        <div class="team-arrow">→</div>
+        <div class="team-node">
+          <span class="team-role">Cloud</span>
+          <span class="team-desc">Hosts the application</span>
+        </div>
+        <div class="team-arrow">→</div>
+        <div class="team-node">
+          <span class="team-role">End User</span>
+          <span class="team-desc">Experiences uptime</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Roadmap Container -->
+    <section class="roadmap-card">
+      <div class="roadmap-header">
+        <div class="roadmap-header-copy">
+          <h2>What a beginner should learn first</h2>
+          <p>The main spine is the highway. The side nodes matter, but they only make sense after the core path starts feeling solid.</p>
+        </div>
+        <div class="legend" id="roadmap-legend">
+          <button class="legend-chip" data-filter="core">Core</button>
+          <button class="legend-chip" data-filter="alternative">Alternative</button>
+          <button class="legend-chip" data-filter="later">Later</button>
+        </div>
+      </div>
+
+      <div class="roadmap-map" id="roadmap-map">
+        <!-- SVG lines will be injected here -->
+        <svg class="roadmap-svg" id="roadmap-svg"></svg>
+        <!-- HTML Node Cards will be injected here -->
+        <div class="roadmap-nodes" id="roadmap-nodes"></div>
+      </div>
+    </section>
+
+    <!-- Connected Roles -->
+    <section class="connected-roles">
+      <h2>Connected Roles</h2>
+      <div class="connected-grid">
+        <div class="connected-card">
+          <h3>DevOps + Security = DevSecOps</h3>
+          <p>Bake security checks directly into every pipeline and deployment.</p>
+          <span class="connected-badge">Security focus</span>
+        </div>
+        <div class="connected-card">
+          <h3>DevOps + Backend = Platform Engineer</h3>
+          <p>Build internal platforms and tools that developers use daily.</p>
+          <span class="connected-badge">Build developer tools</span>
+        </div>
+        <div class="connected-card">
+          <h3>DevOps + Cloud = Cloud Architect</h3>
+          <p>Design complex, multi-region systems that scale to millions of users.</p>
+          <span class="connected-badge">Design at scale</span>
+        </div>
+      </div>
+      <p class="connected-note">Click any node for the complete beginner version of what it is, why it matters, and how long it honestly takes before it stops feeling random.</p>
+    </section>
+  </main>
+
+  <!-- Global Popup Modal -->
+  <div class="popup-overlay" id="popup-overlay"></div>
+  <div class="popup-modal" id="popup-modal" role="dialog" aria-modal="true">
+    <button class="popup-close" id="popup-close" aria-label="Close popup">&times;</button>
+    <div id="popup-content"></div>
+  </div>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/devops-roadmap.js"></script>
+</body>
+</html>

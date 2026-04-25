@@ -1,0 +1,144 @@
+<!--
+  File: pages/backend.html
+  Purpose: Backend role detail page structure for DevMap
+  Author: Placeholder
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Backend Developer | DevMap</title>
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/roadmap.css">
+</head>
+<body>
+
+  <!-- Dark Mode Toggle -->
+  <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="../index.html" class="logo">Dev<span>Map</span></a>
+      <a href="../index.html" class="btn btn-outline">← Back to Map</a>
+    </div>
+  </header>
+
+  <!-- Role Shell -->
+  <main class="role-shell container-wide">
+    <section class="role-intro">
+      <h1>Backend Developer</h1>
+      <div class="brutal-banner">You won't see your work on screen. But without you, nothing works.</div>
+    </section>
+
+    <!-- What will you build? -->
+    <section class="info-section what-build-section">
+      <h2>What will you build?</h2>
+      <div class="build-grid">
+        <div class="build-card">
+          <span class="build-icon">🔐</span>
+          <h3>Authentication System</h3>
+          <p>Login, signup, sessions, and security.</p>
+        </div>
+        <div class="build-card">
+          <span class="build-icon">🗄</span>
+          <h3>REST API</h3>
+          <p>The data layer every frontend connects to.</p>
+        </div>
+        <div class="build-card">
+          <span class="build-icon">💳</span>
+          <h3>Payment Integration</h3>
+          <p>Stripe, orders, and financial transactions.</p>
+        </div>
+        <div class="build-card">
+          <span class="build-icon">📬</span>
+          <h3>Notification Service</h3>
+          <p>Emails, alerts, and background jobs.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Where do you sit in a team? -->
+    <section class="info-section team-flow-section">
+      <h2>Where do you sit in a team?</h2>
+      <div class="team-flow">
+        <div class="team-node">
+          <span class="team-role">Frontend Dev</span>
+          <span class="team-desc">Builds the interface</span>
+        </div>
+        <div class="team-arrow">→</div>
+        <div class="team-node you">
+          <span class="team-role">You: Backend</span>
+          <span class="team-desc">Processes the logic</span>
+        </div>
+        <div class="team-arrow">→</div>
+        <div class="team-node">
+          <span class="team-role">Database</span>
+          <span class="team-desc">Stores the data</span>
+        </div>
+        <div class="team-arrow">→</div>
+        <div class="team-node">
+          <span class="team-role">End User</span>
+          <span class="team-desc">Receives the result</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Roadmap Container -->
+    <section class="roadmap-card">
+      <div class="roadmap-header">
+        <div class="roadmap-header-copy">
+          <h2>What a beginner should learn first</h2>
+          <p>The main spine is the highway. The side nodes matter, but they only make sense after the core path starts feeling solid.</p>
+        </div>
+        <div class="legend" id="roadmap-legend">
+          <button class="legend-chip" data-filter="core">Core</button>
+          <button class="legend-chip" data-filter="alternative">Alternative</button>
+          <button class="legend-chip" data-filter="later">Later</button>
+        </div>
+      </div>
+
+      <div class="roadmap-map" id="roadmap-map">
+        <!-- SVG lines will be injected here -->
+        <svg class="roadmap-svg" id="roadmap-svg"></svg>
+        <!-- HTML Node Cards will be injected here -->
+        <div class="roadmap-nodes" id="roadmap-nodes"></div>
+      </div>
+    </section>
+
+    <!-- Connected Roles -->
+    <section class="connected-roles">
+      <h2>Connected Roles</h2>
+      <div class="connected-grid">
+        <div class="connected-card">
+          <h3>Backend + Frontend = Fullstack</h3>
+          <p>You are already 40% there when the backend path feels solid.</p>
+          <span class="connected-badge">Already 40% there</span>
+        </div>
+        <div class="connected-card">
+          <h3>Backend + Cloud = DevOps Engineer</h3>
+          <p>Move into deploying, scaling, and managing the infrastructure you build.</p>
+          <span class="connected-badge">Deploy what you build</span>
+        </div>
+        <div class="connected-card">
+          <h3>Backend + Data = Data Engineer</h3>
+          <p>Focus entirely on data pipelines, processing, and large scale storage.</p>
+          <span class="connected-badge">Pipelines and processing</span>
+        </div>
+      </div>
+      <p class="connected-note">Click any node for the complete beginner version of what it is, why it matters, and how long it honestly takes before it stops feeling random.</p>
+    </section>
+  </main>
+
+  <!-- Global Popup Modal -->
+  <div class="popup-overlay" id="popup-overlay"></div>
+  <div class="popup-modal" id="popup-modal" role="dialog" aria-modal="true">
+    <button class="popup-close" id="popup-close" aria-label="Close popup">&times;</button>
+    <div id="popup-content"></div>
+  </div>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/backend-roadmap.js"></script>
+</body>
+</html>

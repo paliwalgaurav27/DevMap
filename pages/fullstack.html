@@ -1,0 +1,145 @@
+<!--
+  File: pages/fullstack.html
+  Purpose: Fullstack role detail page structure for DevMap
+  Author: Placeholder
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fullstack Developer | DevMap</title>
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/roadmap.css">
+</head>
+<body>
+
+  <!-- Dark Mode Toggle -->
+  <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="../index.html" class="logo">Dev<span>Map</span></a>
+      <a href="../index.html" class="btn btn-outline">← Back to Map</a>
+    </div>
+  </header>
+
+  <!-- Role Shell -->
+  <main class="role-shell container-wide">
+    <section class="role-intro">
+      <h1>Fullstack Developer</h1>
+      <div class="brutal-banner">You do everything. That's the power and the curse.</div>
+    </section>
+
+    <!-- What will you build? -->
+    <section class="info-section what-build-section">
+      <h2>What will you build?</h2>
+      <div class="build-grid">
+        <div class="build-card">
+          <span class="build-icon">🛒</span>
+          <h3>Full Web App</h3>
+          <p>Frontend, backend, and database all connected.</p>
+        </div>
+        <div class="build-card">
+          <span class="build-icon">🔐</span>
+          <h3>User Auth System</h3>
+          <p>Signup, login, protected routes end to end.</p>
+        </div>
+        <div class="build-card">
+          <span class="build-icon">📦</span>
+          <h3>SaaS Product</h3>
+          <p>Subscription, dashboard, API, all yours.</p>
+        </div>
+        <div class="build-card">
+          <span class="build-icon">🤖</span>
+          <h3>Internal Tool</h3>
+          <p>Admin panels, data management, business logic.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Where do you sit in a team? -->
+    <section class="info-section team-flow-section">
+      <h2>Where do you sit in a team?</h2>
+      <div class="team-flow">
+        <div class="team-node">
+          <span class="team-role">Designer</span>
+          <span class="team-desc">Decides how it looks</span>
+        </div>
+        <div class="team-arrow">→</div>
+        <div class="team-node you">
+          <span class="team-role">You: Fullstack</span>
+          <span class="team-desc">Builds the whole thing</span>
+        </div>
+        <div class="team-arrow">→</div>
+        <div class="team-node">
+          <span class="team-role">Database</span>
+          <span class="team-desc">Stores the data</span>
+        </div>
+        <div class="team-arrow">→</div>
+        <div class="team-node">
+          <span class="team-role">End User</span>
+          <span class="team-desc">Uses the product</span>
+        </div>
+      </div>
+      <p style="text-align:center; color:var(--color-text-muted); margin-top:1rem;"><em>In small teams you often work alone across the entire stack</em></p>
+    </section>
+
+    <!-- Roadmap Container -->
+    <section class="roadmap-card">
+      <div class="roadmap-header">
+        <div class="roadmap-header-copy">
+          <h2>What a beginner should learn first</h2>
+          <p>The main spine is the highway. The side nodes matter, but they only make sense after the core path starts feeling solid.</p>
+        </div>
+        <div class="legend" id="roadmap-legend">
+          <button class="legend-chip" data-filter="core">Core</button>
+          <button class="legend-chip" data-filter="alternative">Alternative</button>
+          <button class="legend-chip" data-filter="later">Later</button>
+        </div>
+      </div>
+
+      <div class="roadmap-map" id="roadmap-map">
+        <!-- SVG lines will be injected here -->
+        <svg class="roadmap-svg" id="roadmap-svg"></svg>
+        <!-- HTML Node Cards will be injected here -->
+        <div class="roadmap-nodes" id="roadmap-nodes"></div>
+      </div>
+    </section>
+
+    <!-- Connected Roles -->
+    <section class="connected-roles">
+      <h2>Connected Roles</h2>
+      <div class="connected-grid">
+        <div class="connected-card">
+          <h3>Fullstack + Cloud = DevOps Engineer</h3>
+          <p>Deploy and scale what you build.</p>
+          <span class="connected-badge">Deploy and scale</span>
+        </div>
+        <div class="connected-card">
+          <h3>Fullstack + Mobile = Mobile Developer</h3>
+          <p>React Native uses your React skills to build apps.</p>
+          <span class="connected-badge">React Native</span>
+        </div>
+        <div class="connected-card">
+          <h3>Fullstack + AI APIs = AI Engineer</h3>
+          <p>Add intelligence to your applications.</p>
+          <span class="connected-badge">Add intelligence</span>
+        </div>
+      </div>
+      <p class="connected-note">Click any node for the complete beginner version of what it is, why it matters, and how long it honestly takes before it stops feeling random.</p>
+    </section>
+  </main>
+
+  <!-- Global Popup Modal -->
+  <div class="popup-overlay" id="popup-overlay"></div>
+  <div class="popup-modal" id="popup-modal" role="dialog" aria-modal="true">
+    <button class="popup-close" id="popup-close" aria-label="Close popup">&times;</button>
+    <div id="popup-content"></div>
+  </div>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/fullstack-roadmap.js"></script>
+</body>
+</html>

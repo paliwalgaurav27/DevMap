@@ -1,0 +1,144 @@
+<!--
+  File: pages/mobile.html
+  Purpose: Mobile Developer role detail page structure for DevMap
+  Author: Placeholder
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mobile Developer | DevMap</title>
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/roadmap.css">
+</head>
+<body>
+
+  <!-- Dark Mode Toggle -->
+  <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="../index.html" class="logo">Dev<span>Map</span></a>
+      <a href="../index.html" class="btn btn-outline">← Back to Map</a>
+    </div>
+  </header>
+
+  <!-- Role Shell -->
+  <main class="role-shell container-wide">
+    <section class="role-intro">
+      <h1>Mobile Developer</h1>
+      <div class="brutal-banner">You build what people use most. Their phone never leaves their hand.</div>
+    </section>
+
+    <!-- What will you build? -->
+    <section class="info-section what-build-section">
+      <h2>What will you build?</h2>
+      <div class="build-grid">
+        <div class="build-card">
+          <span class="build-icon">📱</span>
+          <h3>Social App</h3>
+          <p>Feeds, profiles, notifications, real-time updates.</p>
+        </div>
+        <div class="build-card">
+          <span class="build-icon">🛒</span>
+          <h3>Shopping App</h3>
+          <p>Product listing, cart, checkout, payments.</p>
+        </div>
+        <div class="build-card">
+          <span class="build-icon">🏃</span>
+          <h3>Fitness Tracker</h3>
+          <p>Sensors, local storage, charts, streaks.</p>
+        </div>
+        <div class="build-card">
+          <span class="build-icon">🔔</span>
+          <h3>Push Notification System</h3>
+          <p>Re-engage users after they leave.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Where do you sit in a team? -->
+    <section class="info-section team-flow-section">
+      <h2>Where do you sit in a team?</h2>
+      <div class="team-flow">
+        <div class="team-node">
+          <span class="team-role">Designer</span>
+          <span class="team-desc">Creates the UI</span>
+        </div>
+        <div class="team-arrow">→</div>
+        <div class="team-node you">
+          <span class="team-role">You: Mobile Dev</span>
+          <span class="team-desc">Builds the app</span>
+        </div>
+        <div class="team-arrow">→</div>
+        <div class="team-node">
+          <span class="team-role">Backend API</span>
+          <span class="team-desc">Provides the data</span>
+        </div>
+        <div class="team-arrow">→</div>
+        <div class="team-node">
+          <span class="team-role">End User</span>
+          <span class="team-desc">Taps the screen</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Roadmap Container -->
+    <section class="roadmap-card">
+      <div class="roadmap-header">
+        <div class="roadmap-header-copy">
+          <h2>What a beginner should learn first</h2>
+          <p>The main spine is the highway. The side nodes matter, but they only make sense after the core path starts feeling solid.</p>
+        </div>
+        <div class="legend" id="roadmap-legend">
+          <button class="legend-chip" data-filter="core">Core</button>
+          <button class="legend-chip" data-filter="alternative">Alternative</button>
+          <button class="legend-chip" data-filter="later">Later</button>
+        </div>
+      </div>
+
+      <div class="roadmap-map" id="roadmap-map">
+        <!-- SVG lines will be injected here -->
+        <svg class="roadmap-svg" id="roadmap-svg"></svg>
+        <!-- HTML Node Cards will be injected here -->
+        <div class="roadmap-nodes" id="roadmap-nodes"></div>
+      </div>
+    </section>
+
+    <!-- Connected Roles -->
+    <section class="connected-roles">
+      <h2>Connected Roles</h2>
+      <div class="connected-grid">
+        <div class="connected-card">
+          <h3>Mobile + Frontend = Fullstack Web and Mobile</h3>
+          <p>React skills work on both platforms.</p>
+          <span class="connected-badge">Both platforms</span>
+        </div>
+        <div class="connected-card">
+          <h3>Mobile + Backend = Fullstack Mobile</h3>
+          <p>Own the entire app end to end.</p>
+          <span class="connected-badge">End to end</span>
+        </div>
+        <div class="connected-card">
+          <h3>Mobile + AI = AI Mobile Engineer</h3>
+          <p>On-device intelligence, camera AI, voice.</p>
+          <span class="connected-badge">On-device AI</span>
+        </div>
+      </div>
+      <p class="connected-note">Click any node for the complete beginner version of what it is, why it matters, and how long it honestly takes before it stops feeling random.</p>
+    </section>
+  </main>
+
+  <!-- Global Popup Modal -->
+  <div class="popup-overlay" id="popup-overlay"></div>
+  <div class="popup-modal" id="popup-modal" role="dialog" aria-modal="true">
+    <button class="popup-close" id="popup-close" aria-label="Close popup">&times;</button>
+    <div id="popup-content"></div>
+  </div>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/mobile-roadmap.js"></script>
+</body>
+</html>

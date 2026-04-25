@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevMap - The Brutally Honest Guide to Software Roles</title>
+  <meta name="description"
+    content="A brutally honest orientation tool mapping out software development roles, difficulty, timelines, and paths for beginners.">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+
+<body>
+
+  <!-- Dark Mode Toggle -->
+  <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">Dev<span>Map</span></a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container" style="text-align: center;">
+      <div class="hero-content fade-in">
+        <h1>You are here.</h1>
+        <p class="subtitle">Most beginners pick a path blindly and get lost. DevMap is the brutally honest map of tech
+          roles—what they actually are, how hard they are, and how long it really takes to get hired.</p>
+
+        <div class="hero-buttons">
+          <button class="btn btn-primary" data-scroll="map-section">Show me everything</button>
+          <button class="btn btn-outline" id="btn-help">Help me choose</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content Section -->
+  <section id="map-section" class="section">
+    <div class="container">
+      <h2 class="mb-2">The Tech Landscape</h2>
+      <p class="mb-5">Select a role to see its honest reality.</p>
+
+      <div class="map-grid">
+
+        <!-- Frontend -->
+        <a href="pages/frontend.html" class="role-card">
+          <h3>
+            Frontend
+            <span class="badge badge-med">Med</span>
+          </h3>
+          <p>Building the parts users actually see and interact with. You'll wrangle UI state and browser bugs.</p>
+          <div class="role-meta">
+            <span class="meta-item">Demand: <strong>Very High</strong></span>
+          </div>
+        </a>
+
+        <!-- Backend -->
+        <a href="pages/backend.html" class="role-card">
+          <h3>
+            Backend
+            <span class="badge badge-hard">Hard</span>
+          </h3>
+          <p>The invisible engine. Handling data, security, server logic, and APIs. Your code must not break.</p>
+          <div class="role-meta">
+            <span class="meta-item">Demand: <strong>High</strong></span>
+          </div>
+        </a>
+
+        <!-- Fullstack -->
+        <a href="pages/fullstack.html" class="role-card">
+          <h3>
+            Fullstack
+            <span class="badge badge-hard">Very Hard</span>
+          </h3>
+          <p>Doing both Frontend and Backend. You are the generalist carrying the entire weight of small projects.</p>
+          <div class="role-meta">
+            <span class="meta-item">Demand: <strong>V. High</strong></span>
+          </div>
+        </a>
+
+        <!-- Database -->
+        <a href="pages/dba.html" class="role-card">
+          <h3>
+            Database Admin
+            <span class="badge badge-med">Med</span>
+          </h3>
+          <p>Storing, migrating, and querying massive amounts of data safely and efficiently.</p>
+          <div class="role-meta">
+            <span class="meta-item">Demand: <strong>Medium</strong></span>
+          </div>
+        </a>
+
+        <!-- DevOps -->
+        <a href="pages/devops.html" class="role-card">
+          <h3>
+            DevOps
+            <span class="badge badge-hard">Hard</span>
+          </h3>
+          <p>The bridge between developers and IT. Automating deployments and keeping servers from catching fire.</p>
+          <div class="role-meta">
+            <span class="meta-item">Demand: <strong>High</strong></span>
+          </div>
+        </a>
+
+        <!-- Mobile -->
+        <a href="pages/mobile.html" class="role-card">
+          <h3>
+            Mobile
+            <span class="badge badge-med">Med</span>
+          </h3>
+          <p>Building apps for iOS and Android. Dealing with app store reviews and weird device constraints.</p>
+          <div class="role-meta">
+            <span class="meta-item">Demand: <strong>High</strong></span>
+          </div>
+        </a>
+
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal for Quiz -->
+  <div class="modal-overlay" id="quiz-modal">
+    <div class="modal-content">
+      <button class="close-modal">&times;</button>
+
+      <!-- Step 0 -->
+      <div class="quiz-step active" id="step-0">
+        <h3>Question 1 of 3</h3>
+        <p class="mt-1">When building something, what do you care about most?</p>
+        <div class="quiz-options">
+          <button class="quiz-option" data-next="1">How it looks and feels to a human (Visuals)</button>
+          <button class="quiz-option" data-next="2">How the underlying logic and data works (Systems)</button>
+          <button class="quiz-option" data-next="3">How efficiently the infrastructure runs (Operations)</button>
+        </div>
+      </div>
+
+      <!-- Step 1 (Visuals Flow) -->
+      <div class="quiz-step" id="step-1">
+        <h3>Question 2 of 3</h3>
+        <p class="mt-1">Do you actually want to write code?</p>
+        <div class="quiz-options">
+          <button class="quiz-option" data-recommendation="Frontend" data-link="pages/frontend.html">Yes, translate designs
+            into code.</button>
+          <button class="quiz-option" data-recommendation="UI/UX" data-link="#">No, I just want to design the
+            experience.</button>
+        </div>
+      </div>
+
+      <!-- Step 2 (Systems Flow) -->
+      <div class="quiz-step" id="step-2">
+        <h3>Question 2 of 3</h3>
+        <p class="mt-1">How much math and statistics do you want to deal with?</p>
+        <div class="quiz-options">
+          <button class="quiz-option" data-recommendation="AI / ML Engineer" data-link="#">A lot. Give me algorithms and
+            data sets.</button>
+          <button class="quiz-option" data-recommendation="Backend" data-link="pages/backend.html">Not much. I just want to build
+            business logic and APIs.</button>
+        </div>
+      </div>
+
+      <!-- Step 3 (Operations Flow) -->
+      <div class="quiz-step" id="step-3">
+        <h3>Question 2 of 3</h3>
+        <p class="mt-1">Do you prefer building features or breaking/protecting them?</p>
+        <div class="quiz-options">
+          <button class="quiz-option" data-recommendation="DevOps" data-link="pages/devops.html">Protecting. I want to build deployment
+            pipelines and servers.</button>
+          <button class="quiz-option" data-recommendation="QA Testing" data-link="#">Breaking. I want to write
+            automation tests to catch bugs.</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
