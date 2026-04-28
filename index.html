@@ -128,55 +128,10 @@
   <!-- Modal for Quiz -->
   <div class="modal-overlay" id="quiz-modal">
     <div class="modal-content">
-      <button class="close-modal">&times;</button>
-
-      <!-- Step 0 -->
-      <div class="quiz-step active" id="step-0">
-        <h3>Question 1 of 3</h3>
-        <p class="mt-1">When building something, what do you care about most?</p>
-        <div class="quiz-options">
-          <button class="quiz-option" data-next="1">How it looks and feels to a human (Visuals)</button>
-          <button class="quiz-option" data-next="2">How the underlying logic and data works (Systems)</button>
-          <button class="quiz-option" data-next="3">How efficiently the infrastructure runs (Operations)</button>
-        </div>
+      <button class="close-modal" id="close-quiz">&times;</button>
+      <div id="quiz-dynamic-content">
+        <!-- Quiz will be injected here -->
       </div>
-
-      <!-- Step 1 (Visuals Flow) -->
-      <div class="quiz-step" id="step-1">
-        <h3>Question 2 of 3</h3>
-        <p class="mt-1">Do you actually want to write code?</p>
-        <div class="quiz-options">
-          <button class="quiz-option" data-recommendation="Frontend" data-link="pages/frontend.html">Yes, translate designs
-            into code.</button>
-          <button class="quiz-option" data-recommendation="UI/UX" data-link="#">No, I just want to design the
-            experience.</button>
-        </div>
-      </div>
-
-      <!-- Step 2 (Systems Flow) -->
-      <div class="quiz-step" id="step-2">
-        <h3>Question 2 of 3</h3>
-        <p class="mt-1">How much math and statistics do you want to deal with?</p>
-        <div class="quiz-options">
-          <button class="quiz-option" data-recommendation="AI / ML Engineer" data-link="#">A lot. Give me algorithms and
-            data sets.</button>
-          <button class="quiz-option" data-recommendation="Backend" data-link="pages/backend.html">Not much. I just want to build
-            business logic and APIs.</button>
-        </div>
-      </div>
-
-      <!-- Step 3 (Operations Flow) -->
-      <div class="quiz-step" id="step-3">
-        <h3>Question 2 of 3</h3>
-        <p class="mt-1">Do you prefer building features or breaking/protecting them?</p>
-        <div class="quiz-options">
-          <button class="quiz-option" data-recommendation="DevOps" data-link="pages/devops.html">Protecting. I want to build deployment
-            pipelines and servers.</button>
-          <button class="quiz-option" data-recommendation="QA Testing" data-link="#">Breaking. I want to write
-            automation tests to catch bugs.</button>
-        </div>
-      </div>
-
     </div>
   </div>
 
