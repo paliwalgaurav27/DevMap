@@ -420,8 +420,13 @@ document.addEventListener('DOMContentLoaded', () => {
           </h3>
           <p style="margin-bottom: 1rem;"><strong>What it is:</strong> ${pos.node.what}</p>
           <p style="margin-bottom: 1.5rem;"><strong>Why you need it:</strong> ${pos.node.why}</p>
-          <div style="background: #f3f4f6; padding: 12px; border-radius: 8px; font-weight: 600; text-align: center;">
-            Realistic Time: ${pos.node.time}
+          <div style="background: #f3f4f6; padding: 16px; border-radius: 8px; text-align: center; display: flex; flex-direction: column; gap: 12px; align-items: center;">
+            <div style="font-weight: 600; color: #1f2937;">
+              Realistic Time: ${pos.node.time}
+            </div>
+            <a href="https://developer.mozilla.org/en-US/search?q=${encodeURIComponent(pos.node.name)}" target="_blank" class="btn" style="background: var(--color-primary); color: #ffffff; width: 100%; border-radius: 6px; text-decoration: none;">
+              Read more on MDN Web Docs
+            </a>
           </div>
         `);
       }
